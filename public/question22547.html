@@ -14,7 +14,7 @@
 
 <body>
     <p>Either you are a geek or you must be a 1337 h4x0r! Show us how much of a geek you are by answering the following question:</p>
-    <p>What is written on your badge under the display? I hope you are not blind to the information!</p>
+    <p>What is written on your badge under the e-Paper display? I hope you are not blind to the information!</p>
   <table>
       <tr><td>Answer:</td><td><input id='answer'\></td></tr>
   </table>
@@ -30,7 +30,7 @@
       $("#hint").text("correct! Click here to continue: ").append($("<a>",{ href: data.nextUrl, text: 'click me!' }));
     }
     else {
-      $("#hint").text("Incorrect answer. The text below the LCD panel is not visible. it's tactile!").append($("<img>", { src: "braille_text_behind_LCD_panel.jpg" }))
+      $("#hint").text("Incorrect answer. The text below the e-Paper panel is not visible. it's tactile!").append($("<img>", { src: "braille_text_behind_LCD_panel.jpg" }))
     }
   });
 
