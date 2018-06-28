@@ -25,6 +25,7 @@ function newConnection(client) { //insert here all functions for a connection
 	client.on("sendAnswerForQuestion22547", checkQuestion2);
 	client.on("sendAnswerForQuestion34650", checkQuestion3);
 	client.on("sendAnswerForQuestion41247", checkQuestion4);
+	client.on("sendAnswerForQuestion53113", checkQuestion5);
 }
 
 function checkQuestion2(data) {
@@ -51,5 +52,15 @@ function checkQuestion4(data) {
 	}
 	else {
 		io.sockets.connected[this.client.id].emit("receiveResponseForQuestion41247", { "answer": "incorrect" });
+	}
+}
+
+function checkQuestion5(data) {
+	console.log("received q5 data from " + this.client.id + ". Their answer: "+data.answer.toLowerCase());
+	if (data.answer.toLowerCase() == 'makezurichrocks!') {
+		io.sockets.connected[this.client.id].emit("receiveResponseForQuestion53113", { "answer": "correct", "nextUrl": "/" });
+	}
+	else {
+		io.sockets.connected[this.client.id].emit("receiveResponseForQuestion53113", { "answer": "incorrect" });
 	}
 }

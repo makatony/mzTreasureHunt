@@ -28,7 +28,7 @@
 <script type="text/javascript">
   socket = io();
 
-  socket.on("receiveResponseForQuestion41247", function (data) {
+  socket.on("receiveResponseForQuestion53113", function (data) {
     if (data.answer == 'correct') {
       $("#hint").text("correct! Click here to continue: ").append($("<a>",{ href: data.nextUrl, text: 'click me!' }));
     }
@@ -42,7 +42,7 @@
   $("#answer_btn").click(function () {
     if ($("#answer").val().length > 1) {
       var data = { answer: $("#answer").val()	};
-      socket.emit("sendAnswerForQuestion41247", data);
+      socket.emit("sendAnswerForQuestion53113", data);
     }
   });
   
