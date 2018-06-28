@@ -30,7 +30,7 @@
       $("#hint").text("correct! Click here to continue: ").append($("<a>",{ href: data.nextUrl, text: 'click me!' }));
     }
     else {
-      $("#hint").text("Incorrect answer. The text in the back of the badge is not visible. it's tactile!")
+      $("#hint").text("Incorrect answer. The text below the LCD panel is not visible. it's tactile!").append($("<img>", { src: "braille_text_behind_LCD_panel.jpg" }))
     }
   });
 
