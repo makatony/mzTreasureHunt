@@ -58,7 +58,7 @@ function checkQuestion4(data) {
 function checkQuestion5(data) {
 	console.log("received q5 data from " + this.client.id + ". Their answer: "+data.answer.toLowerCase());
 	if (data.answer.toLowerCase() == 'makezurichrocks!') {
-		io.sockets.connected[this.client.id].emit("receiveResponseForQuestion53113", { "answer": "correct", "nextUrl": "/" });
+		io.sockets.connected[this.client.id].emit("receiveResponseForQuestion53113", { "answer": "correct", "nextUrl": "results.html" });
 	}
 	else {
 		io.sockets.connected[this.client.id].emit("receiveResponseForQuestion53113", { "answer": "incorrect" });
